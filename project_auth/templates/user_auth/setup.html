@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Initial Company Setup{% endblock %}
+     
+{% block content %}
+{% if user.is_authenticated %}
+  <h3>Hi {{ user.username }}! </h3>
+  <p> Welcome to Mass Printing Company</p>
+  <h2>Initial Company Setup</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+     <button type="submit">Submit</button>
+  </form>   
+  <p><a href="{% url 'logout' %}">logout</a></p>
+  {% else %}
+  <p> Welcome to Mass Printing Company</p>
+  <p>Kindly login or signup</p>
+  <a href="{% url 'login' %}">Login</a> |
+  <a href="{% url 'user_auth:signup' %}">Sign Up</a>
+    {% endif %}
+    {% endblock %}
+

@@ -1,0 +1,117 @@
+uploaded resume on thursday 16 Dec 2021
+
+
+friday 17 dec 2021
+1)wipro-(current=2.8,expected=6-7)
+2)niosoft-(current=2.8,expected=7)
+
+saturday 18 dec 2021
+in morning telephonic call by Mr Nanda(mech):
+questions asked:
+
+tell me about yourself
+list vs tuple
+is vs ==
+API
+serialization
+http request
+get vs post
+put vs patch
+git
+sql for one to many query
+about project
+
+
+
+3)mbit-for TCS (current=2.8,expected=6-6.5,mbit said 5.4 and then said not more than 5.5)
+
+
+tuesday 28/12/2021
+4)TMAIC
+call in the morning,interview sheduled tommorow between 2PM-3PM
+
+
+5)consultancy call
+to shedule interview between 10-15 Jan 2022
+i)kharadi,pune based startups (gives 5lpa-9lpa)
+ii)surat,Gujrat (gives 7lpa)
+
+
+
+6)5 jan 2022
+IMAIC- telephonic interview
+
+7 jan 2022
+manager level interview
+
+questions:
+1)request parameter working
+2)all terms in settings.py (debug=True, allowed_host)
+3)asgi and wsgi
+4)internal working of django after hitting url
+5)how do you write test cases in django
+6)can we have server without database
+7)django ORM working
+8)difference in makemigration and migrate
+9)manger level command,your own command
+
+
+
+
+8 jan 2022
+
+10am first round-BlueCognition
+1)jquery
+2)how responsive template works
+3)MVC implemetation with sqlalchemy
+4)two tables foregin key relation ORM query to insert data or fetch from 1st table and 2nd table
+5)there is a textbox,using jquery how to get value in textbox
+6)student table with marks,how will get second highest marks
+7)1000 api on internet,how will you recognize that request is from yout api
+
+
+
+
+
+11 jan incetius 1st round (interviewer from viit)
+-------------------------------------
+a = {'x': 25, 'y':18, 'z':45}
+
+sum=0
+for v in a.values():
+    sum+=v
+
+print(sum)
+
+
+table1 employee id firstname
+
+table2 employee_id attendance_count
+
+
+select employee.firstnam,attendance.attandace_count from employee inner join employee_attendnce on
+employe.id=employee.attecount
+---------------------------------------------------
+
+Infogain
+12 jan 2022 (1st interview)
+
+1)difference in sqlite3 and mysql
+https://www.hostinger.in/tutorials/sqlite-vs-mysql-whats-the-difference/
+
+
+2)why use list coprehension over conventional for loop
+
+3)what are model mixins
+given a,b,c,d class how will you use class e in inheritance using mixins
+
+4)request response cycle in detail
+
+5)middleware details what they actually do
+
+6)python OOPS principles
+
+7)*args datatype,**kwargs datatype
+
+
+

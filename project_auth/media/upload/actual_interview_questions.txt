@@ -1,0 +1,108 @@
+1)IMAIC 2nd round cam interview 
+
+--------------------------------------------------------------------
+1)request parameter working,what data is inside request parameter
+
+Django uses request and response objects to pass state through the system.
+When a page is requested, Django creates an HttpRequest object that contains metadata about the request. Then Django loads the appropriate view, passing the HttpRequest as the first argument to the view function. Each view is responsible for returning an HttpResponse object.
+--------------------------------------------------------------------
+2)all terms in settings.py (debug=True, allowed_host)  key?
+
+see django documentation
+
+Where is the Django secret key?
+There is a setting in the settings.py file named SECRET_KEY . This key is part of Django's security system. Given it's part of the security system, it's best to keep this key hidden and safe.SECRET_KEY has always 50 characters of length. No whitespaces.
+--------------------------------------------------------------------
+3)asgi and wsgi
+
+
+What is ASGI and why do we need it?
+ASGI stands for Asynchronous Server Gateway Interface. It extends the capabilities of WSGI (Web Server Gateway Interface), which is a standard way of communication between the web server and the web applications in most of the python web frameworks like Django.
+
+Both ASGI and WSGI are the specifications to provide a standard interface between the Python web servers, applications/framework, but to understand why do we need to introduce a completely new specification (ASGI) especially when most of the python web applications and frameworks successfully using WSGI as a standard, we need to first understand what are the limitations with WSGI and how a new specification like ASGI can handle them.
+
+What are the limitations of WSGI?
+At the time when WSGI was in the process of development, the only concern designers had was to make a protocol which provides a common ground for web development, such that, users can easily switch between many web frameworks without worrying about the details of how the new framework interacts with the server. And actually WSGI did a pretty good job in dealing with these issues appropriately, but when the relatively new protocols other than standard HTTP (HyperText Transfer Protocol) especially WebSocket started gaining popularity within the web developers community, WSGI failed to provide a way to develop applications which can handle these protocols.
+
+
+read further at-
+https://www.technoarchsoftwares.com/blog/asgi/
+--------------------------------------------------------------------
+4)internal working of django after hitting url
+--------------------------------------------------------------------
+5)how do you write test cases in django
+--------------------------------------------------------------------
+6)can we have server without database
+--------------------------------------------------------------------
+7)django ORM working
+--------------------------------------------------------------------
+8)difference in makemigration and migrate
+
+When writing applications for relational databases such as MySQL or PostgreSQL, there are two things to keep in mine:
+
+The first is the structure of the database itself. This includes things such as the tables, fields and relationships between tables.
+The second is how the objects in yout application map to data in your database. This involves writing code for mapping objects in our application to rows in the database and vica versa.
+These two components need to work together, because if the structure of your database tables deviates from your objects, then you’ll get errors in your code.
+
+Historically, this had to be done manually by writing SQL statements to create tables and their structures in your database. For example, if your application had to handle “products” you might write some SQL to create a table called “Product” with a number of fields used for storing the data. 
+
+Then you would write some code that made assumptions about this table (such as the name, fields, types, maximum character lengths, etc…). If you needed to make a change to the data (such as adding a new field), you would need to do this in both your app code and the database by writing SQL to modify the table structure.
+
+The problem with this approach, is it gets difficult to manage quickly. As your site grows and you make more and more changes, the risk of errors grows which results in bugs, slow development, instabaility, data loss and so on…
+
+Django has a brilliant solution to this problem, called the Object Relational Mapper (ORM).
+
+The idea is that instead of managing your database manually, Django provides a set of tools which does it on your behalf.
+
+These tools include the following:
+
+Database models to help you define the structure of your data in your code, and map them to objects in your database.
+The makemigrations command which auto-generates migration files that contain instructions for making changes to your database.
+The migrate command which run the instructions defined in your migrations.
+This is where the migrate and makemigrations command comes in…
+
+When you run makemigrations, Django will identify any changes you’ve made to your database models. If it sees a change, it will generate a migration file which contains the modifications required to make your database structure consistent with the model change.
+
+Then, when you run the migrate command, it will look at these migrations and use them to make any changes required to your database.
+
+So the difference between makemigrations and migrate is this:
+
+makemigrations auto generates migration files containing changes that need to be applied to the database, but doesn’t actually change anyhting in your database.
+migrate will make the actual modifications to your database, based on the migration files.
+--------------------------------------------------------------------
+9)manger level command,your own command
+--------------------------------------------------------------------
+10)coding task-to print hello on browser
+--------------------------------------------------------------------
+11)can we write another parameter name instead of request
+
+yes
+--------------------------------------------------------------------
+
+12)django life cycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+varacity-telephonic interview
+
+what are signals-
+Signals are used to perform any action on modification of a model instance. The signals are utilities that help us to connect events with actions. We can develop a function that will run when a signal calls it. In other words, Signals are used to perform some action on modification/creation of a particular entry in Database. For example, One would want to create a profile instance, as soon as a new user instance is created in Database
+
+
+
+how do you write test cases
+
+
+fluper-
+how do do you get location of delivery boy in api
+websocket and fire based something
